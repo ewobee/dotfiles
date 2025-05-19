@@ -1,0 +1,70 @@
+/* defining colors */
+@define-color text #e0def4;
+@define-color base #191724;
+@define-color highlight #403d52;
+@define-color overlay #26233a;
+
+* {
+    border: none;
+    border-radius: 4px;
+    font-family: Cozette, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+window#waybar {
+    background: @base;
+    box-shadow: inset 0 -4px @overlay;
+    color: @text;
+    border-radius: 0;
+
+}
+
+tooltip {
+    background: @overlay;
+    border: 1px solid @base;
+}
+tooltip label {
+    color: @text;
+}
+
+.module {
+    margin: 2px 2px;
+    padding: 0 10px;
+    color: @text;
+    background-color: transparent;
+}
+.module:hover {
+    background-color: @highlight;
+}
+
+button {
+    background: transparent;
+}
+button:hover {
+    background: @highlight;
+}
+
+button.focused, #mode {
+    background: @highlight;
+    box-shadow: inset 0 -3px @text;
+}
+
+#workspaces:hover {
+    background: transparent;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: transparent;
+    color: @text;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
