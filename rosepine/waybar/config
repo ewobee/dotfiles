@@ -62,7 +62,7 @@
     "sway/window": {
 	"format": {},
 	"rewrite": {
-	    "(.*)— Mozilla Firefox": " Firefox — $1",
+	    "(.*)— Mozilla Firefox": "Firefox — $1",
 	    "Mozilla Firefox": "Firefox",
 	    "Alacritty": "Terminal"
 	}
@@ -172,7 +172,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "",
         "tooltip-format": "{ifname}: {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠"

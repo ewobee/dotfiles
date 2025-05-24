@@ -31,10 +31,10 @@ seat seat0 xcursor_theme Adwaita
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill -s TERM
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -129,7 +129,7 @@ seat seat0 xcursor_theme Adwaita
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+tab focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -216,10 +216,17 @@ focus_follows_mouse no
 font pango:Cozette Regular 12
 
 ## Window Borders
-default_border pixel 4
+default_border pixel 0
+
+## swayfx
+# rounded corners
+corner_radius 16
+#shadows
+shadows enable
 
 ## Gaps between windows
 gaps inner 8
 
 ## Open volume as floating window
 for_window [title="Volume Control"] floating enable
+for_window [title="Picture-in-Picture"] floating enable

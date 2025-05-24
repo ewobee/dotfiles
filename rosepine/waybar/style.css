@@ -39,6 +39,7 @@ tooltip label {
 
 button {
     background: transparent;
+    margin: 0 2px;
 }
 button:hover {
     background: @highlight;
